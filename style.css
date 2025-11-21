@@ -365,23 +365,41 @@ img {
 
 /* About */
 
+.about-section {
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;          /* centers heading + text together */
+}
+
+.about-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* paragraph */
 .about-text {
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.7;
-  max-width: 900px;
-  margin: 0 auto;
   font-size: 16px;
 }
 
-/* Mobile optimisation */
+/* mobile */
 @media (max-width: 768px) {
+  .about-heading {
+    font-size: 24px;
+  }
   .about-text {
-    text-align: left;   /* Avoid large word gaps on small screens */
+    text-align: left;
     line-height: 1.6;
     font-size: 15px;
   }
 }
+
 
 /* Skills / Expertise */
 

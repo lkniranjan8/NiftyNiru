@@ -675,4 +675,44 @@ blockquote {
   font-size: 0.8rem;
   margin: 0 0 12px;
 }
+/* Programs list layout */
+
+.programs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.programs-list li {
+  background: linear-gradient(145deg, #0b1220, #050816);
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.programs-list h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.programs-list p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Mobile optimisation */
+@media (max-width: 768px) {
+  .programs-list li {
+    padding: 14px;
+  }
+
+  .programs-list h3 {
+    font-size: 0.95rem;
+  }
+}
 

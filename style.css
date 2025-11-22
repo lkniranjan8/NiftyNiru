@@ -715,4 +715,46 @@ blockquote {
     font-size: 0.95rem;
   }
 }
+/* ===== Testimonials Marquee ===== */
+
+.testimonials-marquee {
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+
+.marquee-track {
+  display: inline-flex;
+  gap: 18px;
+  white-space: nowrap;
+  animation: testimonials-scroll 20s linear infinite;
+}
+
+/* Pause on hover */
+.testimonials-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Cards in horizontal layout */
+.testimonials-marquee blockquote {
+  min-width: 320px;
+  max-width: 420px;
+  white-space: normal;
+  flex-shrink: 0;
+}
+
+/* Mobile optimisation */
+@media (max-width: 768px) {
+  .testimonials-marquee blockquote {
+    min-width: 260px;
+    max-width: 320px;
+  }
+}
+
+/* Animation */
+@keyframes testimonials-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 

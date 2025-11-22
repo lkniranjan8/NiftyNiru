@@ -756,5 +756,50 @@ blockquote {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+/* ===== Testimonials Marquee – Simple Working Version ===== */
+
+.testimonials-marquee {
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;                 /* allow track to be wider than container */
+  animation: testimonials-scroll 20s linear infinite;
+}
+
+/* Pause on hover */
+.testimonials-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Reuse your existing blockquote style, just tweak for row layout */
+.testimonials-marquee blockquote {
+  min-width: 320px;
+  max-width: 420px;
+  flex-shrink: 0;
+  white-space: normal;                /* text wraps inside card */
+}
+
+/* Mobile optimisation */
+@media (max-width: 768px) {
+  .testimonials-marquee blockquote {
+    min-width: 260px;
+    max-width: 320px;
+  }
+}
+
+/* Animation: move from right to left fully */
+@keyframes testimonials-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 

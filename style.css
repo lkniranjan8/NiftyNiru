@@ -580,4 +580,99 @@ blockquote {
     text-align: left;
   }
 }
+/* =========================
+   Tighter section spacing
+   ========================= */
+.section {
+  padding: 48px 0;          /* was 80 / 52 – reduced */
+}
+
+.about-section {
+  padding: 56px 20px;       /* was 80 – reduced */
+}
+
+.section + .section,
+.section + .about-section,
+.about-section + .section {
+  margin-top: -10px;        /* pulls sections closer visually */
+}
+
+/* Headings – slightly tighter */
+.section-title {
+  font-size: 1.4rem;        /* a bit smaller */
+  margin: 0 0 16px;         /* was 20+ – reduced gap */
+}
+
+/* Paragraphs – slightly tighter line height */
+.about-text {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;         /* was 1.7 */
+  font-size: 15px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .section {
+    padding: 32px 16px;     /* much tighter on mobile */
+  }
+
+  .about-section {
+    padding: 40px 16px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+
+  .about-text {
+    text-align: left;
+    line-height: 1.5;
+  }
+}
+
+/* =========================
+   Compact expertise grid UI
+   ========================= */
+.expertise-grid-new {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller cards */
+  gap: 16px;                              /* was 20px */
+  margin-top: 14px;                       /* tighter */
+}
+
+.expertise-card {
+  background: linear-gradient(145deg, #0b1220, #050816);
+  padding: 14px 14px 12px;                /* was 18px */
+  min-height: 115px;                      /* was 150px */
+  border-radius: 12px;                    /* smaller radius */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.2s ease, border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-4px);            /* reduced hover lift */
+  border-color: #4f7cff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.7);
+}
+
+.expertise-card h3 {
+  margin-bottom: 4px;                     /* was 8px */
+  font-size: 0.95rem;                     /* ~15px */
+}
+
+.expertise-card p {
+  font-size: 0.82rem;                     /* ~13px */
+  line-height: 1.4;                       /* was 1.5 */
+  color: #c4c9e5;
+}
+
+/* Optional: tighter testimonials too */
+blockquote {
+  padding: 12px 12px;
+  font-size: 0.8rem;
+  margin: 0 0 12px;
+}
 

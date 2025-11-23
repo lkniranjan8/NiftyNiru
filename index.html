@@ -9,7 +9,7 @@
     content="Lakshmi Niranjan - NISM Certified Research Analyst and Capital Market Trainer with 11+ years of experience in Equity Markets, Wealth Management and Investor Education."
   />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
@@ -17,211 +17,197 @@
 <body>
 <header class="site-header">
   <div class="container header-inner">
-    <div class="logo">
-      <span class="logo-mark">LN</span>
+    <div class="logo" role="banner">
+      <span class="logo-mark" aria-label="Logo initials LN">LN</span>
       <div>
         <div class="logo-name">Lakshmi Niranjan</div>
-        <div class="logo-tag">SEBI SMART Trainer - NSE Empanneled</div>
+        <div class="logo-tag">SEBI SMART Trainer - NSE Empaneled</div>
       </div>
     </div>
 
-    <nav class="nav" id="navMenu">
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Primary Navigation">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
-      <a href="#workshops">Programs</a>
+      <a href="#programs">Programs</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </div>
 </header>
 
-<section id="home" class="hero">
-  <div class="container hero-inner">
+<main>
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <span class="hero-tagline">SEBI SMART Trainer & NISM Certified Research Analyst</span>
+        <h1>Elevating Investors Through <span class="highlight">Financial Awareness & Long-Term Investment Discipline</span></h1>
+        <p class="hero-subtext">
+          I guide individuals to understand market behaviour, detect financial scams, control investment risks,
+          and build sustainable long-term wealth foundations through structured investor education.
+        </p>
 
-    <div class="hero-left">
-      <span class="hero-tagline">SEBI SMART Trainer & NISM Certified Research Analyst</span>
-      <h2>Elevating Investors Through <span class="highlight">Financial Awareness & Long-Term Investment Discipline</span></h2>
-      <p class="hero-subtext">
-     I guide individuals to understand market behaviour, detect financial scams, control investment risks, 
-     and build sustainable long-term wealth foundations through structured investor education.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#contact" class="btn primary">Connect</a>
-        <a href="Lakshmi_Niranjan_CV.pdf" class="btn ghost" target="_blank">Download Resume</a>
-      </div>
-
-      <div class="hero-meta">
-        <span><i class="fa-solid fa-location-dot"></i> India,Chennai</span>
-        <span><i class="fa-solid fa-briefcase"></i> 11+ Years Experience</span>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="profile-card">
-        <div class="profile-photo-ring">
-          <img src="Lak.jpg" alt="Lakshmi Niranjan">
+        <div class="hero-actions">
+          <a href="#contact" class="btn primary" role="button">Connect</a>
+          <a href="Lakshmi_Niranjan_CV.pdf" class="btn ghost" target="_blank" rel="noopener noreferrer" role="button">Download Resume</a>
         </div>
-        <h3>Lakshmi Niranjan</h3>
-        <p>SEBI SMART Trainer</p>
-        <div class="profile-icons">
-          <a href="mailto:lkniranjan8@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://wa.me/918525096140" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/in/niftyniru" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+        <div class="hero-meta">
+          <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> India, Chennai</span>
+          <span><i class="fa-solid fa-briefcase" aria-hidden="true"></i> 11+ Years Experience</span>
         </div>
       </div>
+
+      <div class="hero-right">
+        <div class="profile-card" role="region" aria-label="Profile information">
+          <div class="profile-photo-ring">
+            <img src="Lak.jpg" alt="Lakshmi Niranjan" />
+          </div>
+          <h3>Lakshmi Niranjan</h3>
+          <p>SEBI SMART Trainer</p>
+          <div class="profile-icons">
+            <a href="mailto:lkniranjan8@gmail.com" aria-label="Email Lakshmi Niranjan"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://wa.me/918525096140" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/niftyniru" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section id="about" class="section">
-  <div class="section-container">
-      <h2 class="section-title">About Me</h2>
+  <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <div class="section-container about-container">
+      <h2 id="about-heading" class="section-title about-heading">About Me</h2>
       <p class="about-text">
-        I'am an IT professional with 11+ years of experience, specializing in Wealth Management, Capital Market, and other BFSI domains. 
-        My expertise spans functional and domain analysis, project management, and audit metrics, enabling me to drive efficiency, compliance, and quality in financial technology solutions. 
-        Beyond my IT expertise, I am deeply passionate about financial markets, investor education, and FMCG research, with a growing focus on understanding consumer behaviour, market trends, and strategic insights within the FMCG sector. 
-        I'm dedicated to empowering individuals with financial knowledge and informed decision-making. 
+        I am an IT professional with 11+ years of experience, specializing in Wealth Management, Capital Market, and other BFSI domains.
+        My expertise spans functional and domain analysis, project management, and audit metrics, enabling me to drive efficiency,
+        compliance, and quality in financial technology solutions. Beyond my IT expertise, I am deeply passionate about financial markets,
+        investor education, and FMCG research, with a growing focus on understanding consumer behaviour, market trends, and strategic insights within the FMCG sector.
+        I'm dedicated to empowering individuals with financial knowledge and informed decision-making.
         Currently, I am also a CFP aspirant to further enhance my financial planning and advisory skills.
       </p>
     </div>
+  </section>
 
-
-<section id="expertise" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Core Expertise</h2>
-    <div class="expertise-grid-new">
-    <div class="expertise-card">
-      <h3>Equity Markets</h3>
-      <p>Market analysis for Swing Trading and Value Investing.</p>
-    </div>
-
-    <div class="expertise-card">
-      <h3>Investor Awareness Training</h3>
-      <p>Structured financial literacy and scam prevention programs.</p>
-    </div>
-
-    <div class="expertise-card">
-      <h3>FMCG Market Research</h3>
-      <p>Consumer behaviour, Product-Brand analysis.</p>
-    </div>
-
-    <div class="expertise-card">
-      <h3>Financial Planning</h3>
-      <p>Goal-based investment and wealth strategies.</p>
-    </div>
-
-    <div class="expertise-card">
-      <h3>Technical Analysis</h3>
-      <p>Price Action, Indicators & Candle Chart Patterns.</p>
-    </div>
-
-    <div class="expertise-card">
-      <h3>Fundamental Analysis</h3>
-      <p>Financial Data-driven evaluation of stocks.</p>
-    </div>
-      
-    <div class="expertise-card">
-      <h3>Investment Products</h3>
-      <p>Mutual funds, ETF, Debt and Traditional Banking Products.</p>
-    </div>
-
-    <div class="expertise-card">
-      <h3>NCFM & NISM Certifications</h3>
-      <p>Training & Preparation for major modules.</p>
-    </div>
-
-    <div class="expertise-card">
-      <h3>AML & Trade Finance</h3>
-      <p>Fundamentals of Anti money laundering and Bank Guarantees.</p>
-    </div>
-      
-    <div class="expertise-card">
-      <h3>Diversified Investment</h3>
-      <p>Risk Profiling, Asset allocation and Rebalancing.</p>
-    </div>
-  </div>
-</section>
-
-<section id="programs" class="section">
-  <div class="section-container">
-    <h2 class="section-title">Programs Conducted</h2>
-
-    <ul class="programs-list">
-      <li>
-        <h3>Investor Awareness Program</h3>
-        <p>
-          Intro-level session for students, NGOs and corporates covering basics of equity markets,
-          risk management and common scams to avoid.
-        </p>
-      </li>
-
-      <li>
-        <h3>Equity Market Deep Dive</h3>
-        <p>
-          Structured program for serious learners on stock analysis, sectors, market cycles
-          and building a long-term portfolio.
-        </p>
-      </li>
-
-      <li>
-        <h3>Personal Finance & Retirement</h3>
-        <p>
-          Covers budgeting, goal-based investing, asset allocation and retirement planning
-          tailored for working professionals.
-        </p>
-      </li>
-
-      <li>
-        <h3>Custom Corporate Workshops</h3>
-        <p>
-          Curated modules for companies focusing on employee financial wellbeing,
-          ESOPs understanding and wealth creation.
-        </p>
-      </li>
-    </ul>
-  </div>
-</section>
-  
-<section id="testimonials" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Testimonials</h2>
-<marquee scrolldelay="0" scrollamount="12">
-
-    <div class="testimonials-marquee">
-      <div class="marquee-track">
-
-        <blockquote>"Extremely insightful session that simplified market concepts brilliantly."</blockquote>
-        <blockquote>"Highly engaging and practical approach to investment education."</blockquote>
-
-        <!-- Duplicate for smooth infinite loop -->
-        <blockquote>"Extremely insightful session that simplified market concepts brilliantly."</blockquote>
-        <blockquote>"Highly engaging and practical approach to investment education."</blockquote>
-
+  <section id="expertise" class="section section-alt" aria-labelledby="expertise-heading">
+    <div class="container">
+      <h2 id="expertise-heading" class="section-title">Core Expertise</h2>
+      <div class="expertise-grid-new" role="list">
+        <div class="expertise-card" role="listitem">
+          <h3>Equity Markets</h3>
+          <p>Market analysis for Swing Trading and Value Investing.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>Investor Awareness Training</h3>
+          <p>Structured financial literacy and scam prevention programs.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>FMCG Market Research</h3>
+          <p>Consumer behaviour, Product-Brand analysis.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>Financial Planning</h3>
+          <p>Goal-based investment and wealth strategies.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>Technical Analysis</h3>
+          <p>Price Action, Indicators & Candle Chart Patterns.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>Fundamental Analysis</h3>
+          <p>Financial Data-driven evaluation of stocks.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>Investment Products</h3>
+          <p>Mutual funds, ETF, Debt and Traditional Banking Products.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>NCFM & NISM Certifications</h3>
+          <p>Training & Preparation for major modules.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>AML & Trade Finance</h3>
+          <p>Fundamentals of Anti money laundering and Bank Guarantees.</p>
+        </div>
+        <div class="expertise-card" role="listitem">
+          <h3>Diversified Investment</h3>
+          <p>Risk Profiling, Asset allocation and Rebalancing.</p>
+        </div>
       </div>
     </div>
-  </marquee>
-  </div>
-</section>
+  </section>
 
+  <section id="programs" class="section" aria-labelledby="programs-heading">
+    <div class="section-container">
+      <h2 id="programs-heading" class="section-title">Programs Conducted</h2>
+      <ul class="programs-list">
+        <li>
+          <h3>Investor Awareness Program</h3>
+          <p>
+            Intro-level session for students, NGOs and corporates covering basics of equity markets,
+            risk management and common scams to avoid.
+          </p>
+        </li>
+        <li>
+          <h3>Equity Market Deep Dive</h3>
+          <p>
+            Structured program for serious learners on stock analysis, sectors, market cycles
+            and building a long-term portfolio.
+          </p>
+        </li>
+        <li>
+          <h3>Personal Finance & Retirement</h3>
+          <p>
+            Covers budgeting, goal-based investing, asset allocation and retirement planning
+            tailored for working professionals.
+          </p>
+        </li>
+        <li>
+          <h3>Custom Corporate Workshops</h3>
+          <p>
+            Curated modules for companies focusing on employee financial wellbeing,
+            ESOPs understanding and wealth creation.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
+  <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <h2 id="testimonials-heading" class="section-title">Testimonials</h2>
+      <div class="testimonials-marquee" aria-label="Testimonials">
+        <div class="marquee-track" role="list">
+          <blockquote role="listitem">"Extremely insightful session that simplified market concepts brilliantly."</blockquote>
+          <blockquote role="listitem">"Highly engaging and practical approach to investment education."</blockquote>
+          <!-- Duplicates for smooth scroll -->
+          <blockquote role="listitem">"Extremely insightful session that simplified market concepts brilliantly."</blockquote>
+          <blockquote role="listitem">"Highly engaging and practical approach to investment education."</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="section">
-  <div class="container">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: lkniranjan8@gmail.com</p>
-    <p>WhatsApp: +91 8525096140</p>
-  </div>
-</section>
+  <section id="contact" class="section" aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading" class="section-title">Contact</h2>
+      <p>Email: <a href="mailto:lkniranjan8@gmail.com">lkniranjan8@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/918525096140" target="_blank" rel="noopener">+91 8525096140</a></p>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
-  <p>© <span id="year"></span> Lakshmi Niranjan</p>
+  <p>© <span id="year" aria-label="Current year"></span> Lakshmi Niranjan</p>
 </footer>
 
-<a href="https://wa.me/918525096140" class="whatsapp-float"><i class="fa-brands fa-whatsapp"></i></a>
-<script src="script.js"></script>
+<a href="https://wa.me/918525096140" class="whatsapp-float" aria-label="WhatsApp chat">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -683,5 +683,12 @@ blockquote {
 .nav a:hover {
   color: #ffffff !important;
 }
+.logo-tag {
+  color: #F3FFA3 !important;
+}
+.profile-card p {
+  color: #F3FFA3 !important;
+}
+
 
 

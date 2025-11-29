@@ -482,7 +482,7 @@ blockquote {
   display: flex;
   gap: 18px;
   width: max-content;
-  animation: testimonials-scroll 85s linear infinite;
+  animation: testimonials-scroll 65s linear infinite;
 }
 
 /* Pause on hover – FIXED */

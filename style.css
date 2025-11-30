@@ -689,6 +689,11 @@ blockquote {
 .profile-card p {
   color: #F3FFA3 !important;
 }
+.about-text {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
 
 
 

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Gallery – Lakshmi Niranjan</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Swiper CSS for slider view -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <style>
+    /* minimal gallery-specific tweaks (keeps theme colors) */
+    .gallery-controls {
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .gallery-controls .btn {
+      padding:8px 12px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .gallery-grid img {
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:10px;
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Swiper overrides (make slides look like tiles) */
+    .swiper-slide .slide-inner {
+      background: rgba(15,23,42,0.95);
+      border-radius: 10px;
+      padding: 8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .swiper-slide img { width:100%; height:240px; object-fit:cover; border-radius:8px; }
+    .back-home {
+      display:inline-block;
+      margin-right:12px;
+    }
+    @media (max-width:640px){ .gallery-grid img { height:120px; } .swiper-slide img{ height:160px; } }
+  </style>
+</head>
+<body>
+
+  <!-- reuse header so nav looks consistent -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">LN</span>
+        <div>
+          <div class="logo-name">Lakshmi Niranjan</div>
+          <div class="logo-tag">SEBI SMART Trainer - NSE Empaneled</div>
+        </div>
+      </div>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#programs">Programs</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main style="padding-top:84px;">
+    <section class="section">
+      <div class="section-container">
+        <h2 class="section-title">Program Gallery</h2>
+
+        <div class="gallery-controls">
+          <a href="index.html" class="btn ghost back-home">← Back to Home</a>
+
+          <div style="margin-left:auto; display:flex; gap:8px; align-items:center;">
+            <span style="color:var(--text-muted); font-size:0.9rem;">View: </span>
+            <button id="gridBtn" class="btn ghost">Grid</button>
+            <button id="sliderBtn" class="btn ghost">Slider</button>
+          </div>
+        </div>
+
+        <!-- Grid container (default) -->
+        <div id="gridView" class="gallery-grid">
+          <img src="images/program1.jpg" alt="IAP 1" data-index="0">
+          <img src="images/program2.jpg" alt="IAP 2" data-index="1">
+          <img src="images/program3.jpg" alt="IAP 3" data-index="2">
+          <img src="images/program4.jpg" alt="IAP 4" data-index="3">
+          <img src="images/program5.jpg" alt="IAP 5" data-index="4">
+          <img src="images/program6.jpg" alt="IAP 6" data-index="5">
+          <img src="images/program7.jpg" alt="IAP 7" data-index="6">
+          <img src="images/program8.jpg" alt="IAP 8" data-index="7">
+          <img src="images/program9.jpg" alt="IAP 9" data-index="8">
+          <img src="images/program10.jpg" alt="IAP 10" data-index="9">
+        </div>
+
+        <!-- Slider (hidden initially) -->
+        <div id="sliderView" style="display:none; margin-top:12px;">
+          <div class="swiper testimonials-swiper" id="gallerySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program1.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program2.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program3.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program4.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program5.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program6.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program7.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program8.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program9.jpg" alt=""></div></div>
+              <div class="swiper-slide"><div class="slide-inner"><img src="images/program10.jpg" alt=""></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox (re-using the same lightbox markup you will have or from earlier instruction) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous">&#10094;</button>
+    <div class="lb-content">
+      <img src="" alt="" id="lb-image">
+      <div class="lb-caption" id="lb-caption"></div>
+    </div>
+    <button class="lb-next" aria-label="Next">&#10095;</button>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- gallery script -->
+  <script>
+    // Grid / Slider toggle
+    const gridBtn = document.getElementById('gridBtn');
+    const sliderBtn = document.getElementById('sliderBtn');
+    const gridView = document.getElementById('gridView');
+    const sliderView = document.getElementById('sliderView');
+    let swiper = null;
+
+    gridBtn.addEventListener('click', () => {
+      gridView.style.display = 'grid';
+      sliderView.style.display = 'none';
+      sliderBtn.classList.remove('active');
+      gridBtn.classList.add('active');
+      if (swiper) { swiper.destroy(true, true); swiper = null; }
+    });
+
+    sliderBtn.addEventListener('click', () => {
+      gridView.style.display = 'none';
+      sliderView.style.display = 'block';
+      sliderBtn.classList.add('active');
+      gridBtn.classList.remove('active');
+      if (!swiper) {
+        swiper = new Swiper('#gallerySwiper', {
+          slidesPerView: 1.25,
+          spaceBetween: 16,
+          loop: true,
+          centeredSlides: true,
+          autoplay: { delay: 2500, disableOnInteraction: false },
+        });
+      }
+    });
+
+    // Lightbox logic (reused from your earlier gallery code)
+    (function () {
+      const images = Array.from(document.querySelectorAll('#gridView img, #sliderView img'));
+      const lightbox = document.getElementById('lightbox');
+      const lbImage = document.getElementById('lb-image');
+      const lbCaption = document.getElementById('lb-caption');
+      const btnClose = document.querySelector('.lb-close');
+      const btnNext = document.querySelector('.lb-next');
+      const btnPrev = document.querySelector('.lb-prev');
+      let currentIndex = 0;
+
+      function openAt(index) {
+        const el = images[index];
+        if (!el) return;
+        currentIndex = index;
+        lbImage.src = el.src;
+        lbImage.alt = el.alt || '';
+        lbCaption.textContent = el.alt || '';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLb() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function showNext() { openAt((currentIndex + 1) % images.length); }
+      function showPrev() { openAt((currentIndex - 1 + images.length) % images.length); }
+
+      images.forEach((img, i) => {
+        img.addEventListener('click', () => openAt(i));
+      });
+
+      btnClose.addEventListener('click', closeLb);
+      btnNext.addEventListener('click', showNext);
+      btnPrev.addEventListener('click', showPrev);
+
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('open')) {
+          if (e.key === 'Escape') closeLb();
+          if (e.key === 'ArrowRight') showNext();
+          if (e.key === 'ArrowLeft') showPrev();
+        }
+      });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLb();
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -47,7 +47,6 @@
       transform: translateY(-2px);
     }
 
-    /* GRID layout */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -69,7 +68,6 @@
       transform: scale(1.03);
     }
 
-    /* Toggle button */
     .toggle-btn {
       margin-top: 10px;
       display: inline-block;
@@ -85,7 +83,6 @@
       background: #38bdf8;
     }
 
-    /* Slider view (hidden initially) */
     .slider-view {
       display: none;
       text-align: center;
@@ -103,105 +100,4 @@
       margin-top: 12px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-    }
-
-    .slider-controls button {
-      padding: 8px 16px;
-      background: #1f2937;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: .2s;
-    }
-
-    .slider-controls button:hover {
-      background: #374151;
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <div class="gallery-container">
-
-    <a href="index.html#gallery" class="back-btn">← Back to Home</a>
-    <h2 class="gallery-title">Program Gallery</h2>
-
-    <!-- Toggle Button -->
-    <div class="toggle-btn" onclick="toggleView()">Switch: Grid / Slider View</div>
-
-    <!-- GRID VIEW -->
-    <div class="gallery-grid" id="gridView">
-      <img src="images/program1.jpg" onclick="openSlider(0)">
-      <img src="images/program2.jpg" onclick="openSlider(1)">
-      <img src="images/program3.jpg" onclick="openSlider(2)">
-      <img src="images/program4.jpg" onclick="openSlider(3)">
-      <img src="images/program5.jpg" onclick="openSlider(4)">
-      <img src="images/program6.jpg" onclick="openSlider(5)">
-      <img src="images/program7.jpg" onclick="openSlider(6)">
-      <img src="images/program8.jpg" onclick="openSlider(7)">
-      <img src="images/program9.jpg" onclick="openSlider(8)">
-      <img src="images/program10.jpg" onclick="openSlider(9)">
-    </div>
-
-    <!-- SLIDER VIEW -->
-    <div class="slider-view" id="sliderView">
-      <img id="sliderImage" src="">
-      <div class="slider-controls">
-        <button onclick="prevImage()">⟨ Prev</button>
-        <button onclick="nextImage()">Next ⟩</button>
-      </div>
-    </div>
-
-  </div>
-
-<script>
-  let currentIndex = 0;
-  const images = [
-    "images/program1.jpg",
-    "images/program2.jpg",
-    "images/program3.jpg",
-    "images/program4.jpg",
-    "images/program5.jpg",
-    "images/program6.jpg",
-    "images/program7.jpg",
-    "images/program8.jpg",
-    "images/program9.jpg",
-    "images/program10.jpg"
-  ];
-
-  function toggleView() {
-    const grid = document.getElementById("gridView");
-    const slider = document.getElementById("sliderView");
-
-    if (grid.style.display !== "none") {
-      grid.style.display = "none";
-      slider.style.display = "block";
-      openSlider(0);
-    } else {
-      slider.style.display = "none";
-      grid.style.display = "grid";
-    }
-  }
-
-  function openSlider(i) {
-    currentIndex = i;
-    document.getElementById("sliderImage").src = images[i];
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    openSlider(currentIndex);
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    openSlider(currentIndex);
-  }
-</script>
-
-</body>
-</html>
+      gap: 20px

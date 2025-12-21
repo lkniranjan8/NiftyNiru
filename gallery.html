@@ -49,7 +49,7 @@
     .gallery-title {
       font-size: 1.7rem;
       font-weight: 600;
-      color: #f3ffa3;
+      color: #F3FFA3;
     }
 
     /* MARQUEE GALLERY */
@@ -67,34 +67,59 @@
     }
 
     .gallery-track img {
-      width: 480px;          /* ⬅ increased */
-      height: 310px;         /* ⬅ increased */
-     object-fit: cover;
-     border-radius: 18px;
-     border: 1px solid rgba(255,255,255,0.2);
-     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
-     background: #020617;
-}
+      width: 480px;
+      height: 310px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
+      background: #020617;
+    }
 
-
-    /* Pause animation on hover */
     .auto-gallery:hover .gallery-track {
       animation-play-state: paused;
     }
 
     @keyframes scrollGallery {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Caption overlay */
+
+    .gallery-item {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .gallery-item img {
+      position: relative;
+      z-index: 1;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 8px 10px;
+      font-size: 0.75rem;
+      background: linear-gradient(
+        to top,
+        rgba(2, 6, 23, 0.85),
+        rgba(2, 6, 23, 0.1)
+      );
+      color: #f9fafb;
+      border-radius: 0 0 18px 18px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      z-index: 2;
     }
 
     .gallery-note {
       text-align: center;
       font-size: 0.8rem;
-      color: #9ca3af;
+      color: #F3FFA3;
       margin-top: 16px;
     }
 
@@ -103,36 +128,12 @@
         width: 320px;
         height: 210px;
       }
-       .caption {
-    font-size: 0.7rem;
-    padding: 6px 8px;
-  }
-}
+
+      .caption {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+      }
     }
-    /* Caption overlay for gallery images */
-
-.gallery-item {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 8px 10px;
-  font-size: 0.75rem;
-  background: linear-gradient(
-    to top,
-    rgba(2, 6, 23, 0.85),
-    rgba(2, 6, 23, 0.1)
-  );
-  color: #f9fafb;
-  border-radius: 0 0 18px 18px;
-  text-align: center;
-  letter-spacing: 0.3px;
-}
   </style>
 </head>
 
@@ -147,128 +148,128 @@
     <section class="auto-gallery">
       <div class="gallery-track">
 
-        <!-- ORIGINAL IMAGES -->
+        <!-- ORIGINAL SET -->
         <div class="gallery-item">
-  <img src="images/Program1.jpg" alt="Program 1">
-  <div class="caption">With CEO, Dhanalakshmi College of Enigneering (DCE)</div>
-</div>
+          <img src="images/Program1.jpg">
+          <div class="caption">With CEO, Dhanalakshmi College of Engineering (DCE)</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program2.JPG" alt="Program 2">
-  <div class="caption">SRM, Ramapuram - Session-I</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program2.JPG">
+          <div class="caption">SRM, Ramapuram - Session I</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program3.JPG" alt="Program 3">
-  <div class="caption">SRM, Ramapuram - Session-II</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program3.JPG">
+          <div class="caption">SRM, Ramapuram - Session II</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program4.JPG" alt="Program 4">
-  <div class="caption">DCE – Financial Planning Session for Faculty Members</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program4.JPG">
+          <div class="caption">DCE – Financial Planning Session for Faculty</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program5.jpg" alt="Program 5">
-  <div class="caption">VIT, Chennai</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program5.jpg">
+          <div class="caption">VIT, Chennai</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program6.JPG" alt="Program 6">
-  <div class="caption">SRM, Ramapuran - Session-III</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program6.JPG">
+          <div class="caption">SRM, Ramapuram - Session III</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program7.jpg" alt="Program 7">
-  <div class="caption">Annai Meenakshi College, Tenkasi</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program7.jpg">
+          <div class="caption">Annai Meenakshi College, Tenkasi</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program8.jpg" alt="Program 8">
-  <div class="caption">Titan Leap NGO - Collaboration Program</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program8.jpg">
+          <div class="caption">Titan Leap NGO - Collaboration Program</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program9.JPG" alt="Program 9">
-  <div class="caption">SRM - Post Session Discussion</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program9.JPG">
+          <div class="caption">SRM - Post Session Discussion</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program10.jpg" alt="Program 10">
-  <div class="caption">Youth Financial Education Program at St Peter's Institute</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program10.jpg">
+          <div class="caption">Youth Financial Education – St Peter's Institute</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program11.jpg" alt="Program 11">
-  <div class="caption">Corporate Awareness Workshop at SQ1 (Cybersecurity)</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program11.jpg">
+          <div class="caption">Corporate Awareness Workshop – SQ1 (Cybersecurity)</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program11.jpg" alt="Program 12">
-  <div class="caption">IAP for Employees Varun Beverage Ltd, Madurai</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program11.jpg">
+          <div class="caption">IAP for Employees – Varun Beverage Ltd, Madurai</div>
+        </div>
 
+        <!-- DUPLICATE SET FOR SEAMLESS LOOP (EXACT COPY) -->
 
-        <!-- DUPLICATE SET FOR SMOOTH LOOP -->
-       <div class="gallery-item">
-  <img src="images/Program1.jpg" alt="Program 1">
-  <div class="caption">With CEO, Dhanalakshmi College of Enigneering (DCE)</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program1.jpg">
+          <div class="caption">With CEO, Dhanalakshmi College of Engineering (DCE)</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program2.JPG" alt="Program 2">
-  <div class="caption">SRM, Ramapuram - Session-I</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program2.JPG">
+          <div class="caption">SRM, Ramapuram - Session I</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program3.JPG" alt="Program 3">
-  <div class="caption">SRM, Ramapuram - Session-II</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program3.JPG">
+          <div class="caption">SRM, Ramapuram - Session II</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program4.JPG" alt="Program 4">
-  <div class="caption">DCE – Financial Planning Session for Faculty Members</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program4.JPG">
+          <div class="caption">DCE – Financial Planning Session for Faculty</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program5.jpg" alt="Program 5">
-  <div class="caption">VIT, Chennai</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program5.jpg">
+          <div class="caption">VIT, Chennai</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program6.JPG" alt="Program 6">
-  <div class="caption">SRM, Ramapuran - Session-III</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program6.JPG">
+          <div class="caption">SRM, Ramapuram - Session III</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program7.jpg" alt="Program 7">
-  <div class="caption">Annai Meenakshi College, Tenkasi</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program7.jpg">
+          <div class="caption">Annai Meenakshi College, Tenkasi</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program8.jpg" alt="Program 8">
-  <div class="caption">Titan Leap NGO - Collaboration Program</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program8.jpg">
+          <div class="caption">Titan Leap NGO - Collaboration Program</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program9.JPG" alt="Program 9">
-  <div class="caption">SRM - Post Session Discussion</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program9.JPG">
+          <div class="caption">SRM - Post Session Discussion</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program10.jpg" alt="Program 10">
-  <div class="caption">Youth Financial Education Program at St Peter's Institute</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program10.jpg">
+          <div class="caption">Youth Financial Education – St Peter's Institute</div>
+        </div>
 
-<div class="gallery-item">
-  <img src="images/Program11.jpg" alt="Program 11">
-  <div class="caption">Corporate Awareness Workshop at SQ1 (Cybersecurity)</div>
-</div>
-        
-<div class="gallery-item">
-  <img src="images/Program11.jpg" alt="Program 12">
-  <div class="caption">IAP for Employees Varun Beverage Ltd, Madurai</div>
-</div>
+        <div class="gallery-item">
+          <img src="images/Program11.jpg">
+          <div class="caption">Corporate Awareness Workshop – SQ1 (Cybersecurity)</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/Program11.jpg">
+          <div class="caption">IAP for Employees – Varun Beverage Ltd, Madurai</div>
+        </div>
 
       </div>
     </section>

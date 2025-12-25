@@ -184,6 +184,7 @@
 
   <!-- SCRIPT: DATE & QUOTES -->
   <script>
+    window.addEventListener("DOMContentLoaded", () => {
     const quotes = [
       "The mind is everything. What you think you become",
       "Influence grows when actions speak before words.",
@@ -202,12 +203,21 @@
     ];
 
     const today = new Date();
-    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-    document.getElementById("todayDate").innerText = today.toLocaleDateString("en-IN", options);
+    const options = {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    };
 
-    const quoteIndex = today.getDate() % quotes.length;
-    document.getElementById("dailyQuote").innerText = `"${quotes[quoteIndex]}"`;
-  </script>
+    const dateEl = document.getElementById("todayDate");
+    const quoteEl = document.getElementById("dailyQuote");
 
+    if (dateEl && quoteEl) {
+      dateEl.innerText = today.toLocaleDateString("en-IN", options);
+      quoteEl.innerText = `"${quotes[today.getDate() % quotes.length]}"`;
+    }
+  });
+</script>
 </body>
 </html>

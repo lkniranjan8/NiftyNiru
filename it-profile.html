@@ -16,8 +16,8 @@
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     .container {
@@ -44,6 +44,13 @@
       height: 64px;
     }
 
+    .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      color: #F3FFA3;
+    }
+
     .nav a {
       font-size: 0.85rem;
       color: #cbd5f5;
@@ -53,60 +60,101 @@
     /* HERO */
 
     .hero {
-      padding: 56px 0;
+      padding: 64px 0 56px;
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 32px;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
       align-items: center;
     }
 
-    .hero-photo img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 2px solid rgba(148,163,184,0.3);
+    /* PHOTO WITH GRADIENT RING */
+
+    .photo-wrap {
+      width: 160px;
+      height: 160px;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed, #f97316);
     }
 
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #020617;
+    }
+
+    /* ICONS */
+
+    .social-icons {
+      margin-top: 14px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(148,163,184,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #F3FFA3;
+      transition: 0.2s;
+    }
+
+    .social-icons a:hover {
+      background: rgba(243,255,163,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* TEXT */
+
     .hero h1 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-size: 2rem;
+      font-weight: 600;
     }
 
     .hero-role {
       font-size: 1rem;
       color: #F3FFA3;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-weight: 500;
     }
 
     .hero-summary {
       font-size: 0.9rem;
       color: #9ca3af;
-      line-height: 1.6;
-      max-width: 720px;
+      line-height: 1.65;
+      max-width: 760px;
     }
 
-    /* SECTION */
+    /* SECTIONS */
 
     section {
-      padding: 48px 0;
+      padding: 56px 0;
       border-top: 1px solid rgba(148,163,184,0.15);
     }
 
     section h2 {
-      font-size: 1.4rem;
-      margin-bottom: 24px;
+      font-size: 1.45rem;
+      margin-bottom: 26px;
       color: #e5e7eb;
+      letter-spacing: 0.3px;
     }
 
     /* FOOTER */
 
     footer {
-      padding: 20px 0;
+      padding: 22px 0;
       text-align: center;
       font-size: 0.75rem;
       color: #9ca3af;
@@ -121,8 +169,12 @@
         text-align: center;
       }
 
-      .hero-photo img {
+      .photo-wrap {
         margin: 0 auto;
+      }
+
+      .social-icons {
+        justify-content: center;
       }
     }
   </style>
@@ -133,11 +185,11 @@
   <!-- HEADER -->
   <header>
     <div class="container nav">
-      <strong>Lakshmi Niranjan</strong>
+      <div class="logo">LN</div>
       <div>
-        <a href="index.html">IAP Profile</a>
-        <a href="it-profile.html">IT Profile</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="launchpage.html">Home</a>
+        <a href="index.html">Training Profile</a>
+        <a href="#it-contact">Contact</a>
       </div>
     </div>
   </header>
@@ -146,12 +198,20 @@
   <section class="hero">
     <div class="container hero-inner">
 
-      <!-- PHOTO -->
-      <div class="hero-photo">
-        <img src="Lak.jpg" alt="Lakshmi Niranjan">
+      <!-- LEFT -->
+      <div>
+        <div class="photo-wrap">
+          <img src="Lak.jpg" alt="Lakshmi Niranjan">
+        </div>
+
+        <div class="social-icons">
+          <a href="https://wa.me/918525096140" title="WhatsApp">WA</a>
+          <a href="mailto:lkniranjan8@gmail.com" title="Email">@</a>
+          <a href="https://www.linkedin.com/in/niftyniru" target="_blank" title="LinkedIn">in</a>
+        </div>
       </div>
 
-      <!-- SUMMARY -->
+      <!-- RIGHT -->
       <div>
         <h1>Lakshmi Niranjan</h1>
         <div class="hero-role">
@@ -173,7 +233,6 @@
   <section id="it-expertise">
     <div class="container">
       <h2>Core IT Expertise</h2>
-      <!-- cards will come here -->
     </div>
   </section>
 
@@ -181,7 +240,6 @@
   <section id="it-experience">
     <div class="container">
       <h2>Professional Experience</h2>
-      <!-- timeline will come here -->
     </div>
   </section>
 

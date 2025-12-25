@@ -115,24 +115,26 @@
     }
 
     /* MOBILE FIX */
-    @media (max-width: 520px) {
-      body {
-        align-items: flex-start;
-      }
+   @media (max-width: 520px) {
+  body {
+    align-items: flex-start;
+  }
 
-      .launch-container {
-        margin-top: 12vh;
-      }
+  .launch-container {
+    margin-top: 12vh;
+  }
 
-      .cta-buttons {
-        flex-direction: column;
-      }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;   /* 👈 KEY FIX */
+  }
 
-      .cta-btn {
-        width: 100%;
-        max-width: 260px;
-      }
-    }
+  .cta-btn {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;        /* 👈 SAFETY CENTERING */
+  }
+}
 
     @media (max-width: 480px) {
       .welcome-title {

@@ -738,7 +738,7 @@ ul.programs-list > li > p {
   color: #F3FFA3 !important;
 }
 /* Mobile – center align profile card */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero-right {
     justify-content: center !important;
   }

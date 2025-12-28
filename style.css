@@ -748,6 +748,20 @@ ul.programs-list > li > p {
     margin-right: auto !important;
   }
 }
+/* 🔼 Final scale-up for hero profile content */
+.profile-card h3 {
+  font-size: 1.2rem !important;
+}
+
+.profile-card p {
+  font-size: 0.95rem !important;
+}
+
+.profile-icons a {
+  width: 40px;
+  height: 40px;
+  font-size: 1.15rem;
+}
 
 
 

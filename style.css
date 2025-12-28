@@ -698,6 +698,10 @@ blockquote {
   max-width: 100% !important;
   width: 100% !important;
 }
+/* 🔒 FINAL OVERRIDE – Programs H3 colour */
+ul.programs-list > li > h3 {
+  color: #FEFF82 !important;
+}
 
 
 

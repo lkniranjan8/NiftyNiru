@@ -831,6 +831,19 @@ ul.programs-list > li > p {
     margin-right: auto !important;
   }
 }
+.resume-hover {
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease,
+              background 0.25s ease;
+}
+
+.resume-hover:hover {
+  transform: translateY(-6px);
+  border-color: rgba(254, 255, 130, 0.6);
+  box-shadow: 0 18px 40px rgba(254, 255, 130, 0.18);
+  background: linear-gradient(145deg, #0f172a, #050816);
+}
 
 
 

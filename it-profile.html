@@ -224,6 +224,39 @@ section h2::after{
   line-height:1.6;
   color:#cbd5f5;
 }
+  .section-tabs{
+  margin-top:22px;
+  display:flex;
+  gap:26px;
+  flex-wrap:wrap;
+}
+
+.section-tabs a{
+  font-size:.85rem;
+  font-weight:500;
+  color:#cbd5f5;
+  position:relative;
+  padding-bottom:4px;
+}
+
+.section-tabs a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,#f97316,#2563eb);
+  transition:width .2s ease;
+}
+
+.section-tabs a:hover{
+  color:#ffffff;
+}
+
+.section-tabs a:hover::after{
+  width:100%;
+}
 
 /* WIDE CARD */
 .it-wide{

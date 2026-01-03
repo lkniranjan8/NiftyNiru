@@ -18,18 +18,19 @@
       color: #f9fafb;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;              /* ✅ PUSH CONTENT UP */
     }
 
     .launch-container {
       max-width: 720px;
       padding: 40px 24px;
       text-align: center;
+      margin-top: 8vh;                      /* ✅ REMOVE EMPTY TOP SPACE */
     }
 
     /* PHOTO */
     .launch-photo {
-      margin-bottom: 22px;
+      margin-bottom: 16px;                  /* tightened */
     }
 
     .photo-frame {
@@ -41,10 +42,10 @@
     }
 
     .photo-frame img {
-      width: 210px;
+      width: 210px;                         /* ✅ BIGGER PHOTO */
       height: 210px;
       object-fit: cover;
-      border-radius: 20px;
+      border-radius: 18px;
       background: #020617;
       display: block;
     }
@@ -117,26 +118,22 @@
     }
 
     /* MOBILE FIX */
-   @media (max-width: 520px) {
-  body {
-    align-items: flex-start;
-  }
+    @media (max-width: 520px) {
+      .launch-container {
+        margin-top: 6vh;                    /* ✅ MOBILE TOP SPACE FIX */
+      }
 
-  .launch-container {
-    margin-top: 12vh;
-  }
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;   /* 👈 KEY FIX */
-  }
-
-  .cta-btn {
-    width: 100%;
-    max-width: 260px;
-    margin: 0 auto;        /* 👈 SAFETY CENTERING */
-  }
-}
+      .cta-btn {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+    }
 
     @media (max-width: 480px) {
       .welcome-title {
@@ -144,7 +141,7 @@
       }
 
       .photo-frame img {
-        width: 160px;
+        width: 160px;                       /* ✅ BIGGER ON MOBILE */
         height: 160px;
       }
     }
@@ -188,52 +185,49 @@
   </div>
 
   <!-- SCRIPT -->
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const quotes = [
-      "The mind is everything. What you think you become.",
-      "When your prayers are not answered, remember: The teacher doesn’t talk during the test.",
-      "Thinking starts success, doing completes it.",
-      "Success is a journey, not a destination.",
-      "Influence grows when actions speak before words.",
-      "Time in the market beats timing the market.",
-      "Knowledge compounds faster than money.",
-      "Markets reward patience more than intelligence.",
-      "Clarity in thought leads to confidence in action.",
-      "In life, direction is more important than speed.",
-      "Happiness is a state of mind.",
-      "Trust the process, not the noise.",
-      "Your habits decide your future.",
-      "When life puts you in the dark, you are being planted—not buried."
-    ];
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const quotes = [
+        "The mind is everything. What you think you become.",
+        "When your prayers are not answered, remember: The teacher doesn’t talk during the test.",
+        "Thinking starts success, doing completes it.",
+        "Success is a journey, not a destination.",
+        "Influence grows when actions speak before words.",
+        "Time in the market beats timing the market.",
+        "Knowledge compounds faster than money.",
+        "Markets reward patience more than intelligence.",
+        "Clarity in thought leads to confidence in action.",
+        "In life, direction is more important than speed.",
+        "Happiness is a state of mind.",
+        "Trust the process, not the noise.",
+        "Your habits decide your future.",
+        "When life puts you in the dark, you are being planted—not buried."
+      ];
 
-    // 🔒 FIXED START DATE (pick any meaningful date)
-    const startDate = new Date("2026-01-01");
+      const startDate = new Date("2026-01-01");
+      const today = new Date();
 
-    const today = new Date();
+      startDate.setHours(0, 0, 0, 0);
+      today.setHours(0, 0, 0, 0);
 
-    // Remove time component to avoid timezone issues
-    startDate.setHours(0, 0, 0, 0);
-    today.setHours(0, 0, 0, 0);
+      const msPerDay = 1000 * 60 * 60 * 24;
+      const totalDaysPassed = Math.floor((today - startDate) / msPerDay);
+      const quoteIndex = totalDaysPassed % quotes.length;
 
-    const msPerDay = 1000 * 60 * 60 * 24;
-    const totalDaysPassed = Math.floor((today - startDate) / msPerDay);
+      const options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      };
 
-    const quoteIndex = totalDaysPassed % quotes.length;
+      document.getElementById("todayDate").innerText =
+        today.toLocaleDateString("en-IN", options);
 
-    const options = {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    };
+      document.getElementById("dailyQuote").innerText =
+        `Quote of the day : “${quotes[quoteIndex]}”`;
+    });
+  </script>
 
-    document.getElementById("todayDate").innerText =
-      today.toLocaleDateString("en-IN", options);
-
-    document.getElementById("dailyQuote").innerText =
-      `Quote of the day : “${quotes[quoteIndex]}”`;
-  });
-</script>
 </body>
 </html>

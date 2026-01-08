@@ -22,34 +22,35 @@
       color: #f9fafb;
       display: flex;
       justify-content: center;
-      align-items: flex-start;              /* ✅ PUSH CONTENT UP */
+      align-items: flex-start;
     }
 
     .launch-container {
       max-width: 720px;
       padding: 40px 24px;
       text-align: center;
-      margin-top: 8vh;                      /* ✅ REMOVE EMPTY TOP SPACE */
+      margin-top: 8vh;
     }
 
     /* PHOTO */
     .launch-photo {
-      margin-bottom: 16px;                  /* tightened */
+      margin-bottom: 18px;
     }
 
+    /* 🥇 GOLD FRAME */
     .photo-frame {
       display: inline-flex;
-      padding: 4px;
-      border-radius: 22px;
-      background: linear-gradient(120deg, #60a5fa, #F3FFA3);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
+      padding: 5px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #FFD700, #FFB703, #F59E0B);
+      box-shadow: 0 22px 50px rgba(245, 158, 11, 0.35);
     }
 
     .photo-frame img {
-      width: 210px;                         /* ✅ BIGGER PHOTO */
-      height: 210px;
+      width: 240px;   /* ✅ INCREASED */
+      height: 240px;  /* ✅ INCREASED */
       object-fit: cover;
-      border-radius: 18px;
+      border-radius: 22px;
       background: #020617;
       display: block;
     }
@@ -63,8 +64,9 @@
       letter-spacing: 0.3px;
     }
 
+    /* 🥇 GOLD NAME */
     .name-highlight {
-      background: linear-gradient(120deg, #60a5fa, #F3FFA3);
+      background: linear-gradient(120deg, #FFD700, #FFB703, #F59E0B);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 700;
@@ -99,7 +101,7 @@
       background: linear-gradient(135deg, #0f172a, #020617);
       color: #ffffff;
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65);
-      border: 1.5px solid rgba(243, 255, 163, 0.55);
+      border: 1.5px solid rgba(245, 158, 11, 0.7);
     }
 
     .cta-btn:hover {
@@ -117,14 +119,14 @@
     .quote-text {
       font-size: 0.88rem;
       font-style: italic;
-      color: #F3FFA3;
-      opacity: 0.9;
+      color: #F59E0B;
+      opacity: 0.95;
     }
 
     /* MOBILE FIX */
     @media (max-width: 520px) {
       .launch-container {
-        margin-top: 6vh;                    /* ✅ MOBILE TOP SPACE FIX */
+        margin-top: 6vh;
       }
 
       .cta-buttons {
@@ -145,8 +147,8 @@
       }
 
       .photo-frame img {
-        width: 160px;                       /* ✅ BIGGER ON MOBILE */
-        height: 160px;
+        width: 190px;   /* ✅ BIGGER ON MOBILE */
+        height: 190px;
       }
     }
   </style>
